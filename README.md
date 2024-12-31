@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Palworld RCON Dashboard
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Palworld RCON Dashboard is a web application designed to manage and monitor a Palworld game server. It provides various functionalities such as server control commands, player management, and real-time data visualization using charts.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Server Control**: Execute commands like shutdown, broadcast messages, kick or ban players, and more.
+- **Player Management**: View and manage currently connected players.
+- **Real-time Data Visualization**: Display charts for active players and server latency over the last 24 hours.
+- **Dark Mode**: The application supports dark mode for better user experience.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **React**: JavaScript library for building user interfaces.
+- **Chart.js**: JavaScript library for creating charts.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Framer Motion**: Library for animations.
+- **Tabler Icons**: Icon library for React.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/DJStompZone/palworld-server-manager.git
+    cd palworld-server-manager
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies**:
 
-## Deploy on Vercel
+    ```bash
+    npm install
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Run the development server**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm run dev
+    ```
+
+4. **Build for production**:
+
+    ```bash
+    npm run build
+    ```
+
+5. **Start the production server**:
+
+    ```bash
+    npm start
+    ```
+
+## Project Structure
+
+- **/components**: Contains reusable UI components.
+- **/pages**: Contains Next.js pages.
+- **/public**: Static assets like images and icons.
+- **/styles**: Global styles and Tailwind CSS configuration.
+- **/utils**: Utility functions and helpers.
+
+## Usage
+
+### Server Control
+
+- **Shutdown**: Schedule a server shutdown with a custom message.
+- **DoExit**: Force stop the server immediately.
+- **Broadcast**: Send a broadcast message to all connected players.
+- **KickPlayer**: Kick a player from the server using their SteamID.
+- **BanPlayer**: Ban a player from the server using their SteamID.
+- **TeleportToPlayer**: Teleport to a player using their SteamID.
+- **TeleportToMe**: Teleport a player to your location using their SteamID.
+- **ShowPlayers**: Display information about all currently connected players.
+- **Info**: Provide server information.
+- **Save**: Save the current world data.
+
+### Real-time Data Visualization
+
+- **Active Players**: Displays a line chart of active players over the last 24 hours.
+- **Server Latency**: Displays a line chart of server latency over the last 24 hours.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps to contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes.
+4. Push your changes to your fork.
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Contact
+
+For any questions or feedback, please contact [DJStompZone](https://github.com/DJStompZone).
